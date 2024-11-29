@@ -7,6 +7,7 @@
 :root {
   --bg-color: #15304c;
   --text-color: white;
+  --text-hover: #c39a1c;
 }
 header {
   display: flex;
@@ -32,9 +33,14 @@ nav li {
   list-style-type: none;
   margin-right: 20px;
 }
+
 nav li a {
   color: var(--text-color);
   text-decoration: none;
+}
+nav li a:hover {
+  color: var(--text-hover);
+  font-weight: bold;
 }
 
 .menu-icon {
@@ -47,6 +53,13 @@ nav li a {
   min-height: calc(100vh - 70px);
   background-size: cover;
   background-position: center;
+}
+
+.menu-icon :hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 0.5s ease;
 }
 
 /* MEDIA */
@@ -72,5 +85,11 @@ nav li a {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 600px) {
+  nav {
+    display: block !important;
   }
 }
